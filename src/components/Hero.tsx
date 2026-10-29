@@ -11,8 +11,8 @@ export function Hero() {
       <div className="mesh-lines" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto grid min-h-[100svh] w-full max-w-6xl grid-cols-1 items-stretch md:grid-cols-[1.08fr_0.92fr]">
-        <div className="relative order-1 h-[42svh] w-full md:order-2 md:h-auto md:min-h-[100svh]">
-          <figure className="animate-image-in hero-frame absolute inset-0 m-0 md:inset-y-8 md:right-0 md:left-4 md:w-[min(100%,33rem)]">
+        <div className="relative order-1 h-[42svh] w-full md:order-2 md:h-full md:min-h-[100svh]">
+          <figure className="animate-image-in hero-frame absolute inset-0 m-0 h-full w-full md:inset-y-8 md:right-0 md:left-4 md:h-auto md:w-[min(100%,33rem)]">
             <Image
               src="https://avatars.githubusercontent.com/u/159481499?v=4"
               alt="Portrait of Rukvith Reddy Challa"

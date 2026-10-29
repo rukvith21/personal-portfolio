@@ -365,7 +365,6 @@ a.project-row:focus-visible {
 }
 
 .hero-frame {
-  position: relative;
   overflow: hidden;
   isolation: isolate;
 }
