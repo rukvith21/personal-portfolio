@@ -11,27 +11,50 @@ export function Hero() {
       <div className="mesh-lines" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto grid min-h-[100svh] w-full max-w-6xl grid-cols-1 md:grid-cols-[1.08fr_0.92fr]">
-        <div className="flex flex-col justify-end px-6 pb-12 pt-28 md:justify-center md:px-10 md:pb-20 md:pt-24">
-          <span className="animate-rise accent-bar mb-7 block" aria-hidden="true" />
+        <div className="relative order-1 h-[42svh] w-full md:order-2 md:h-auto md:min-h-full">
+          <figure className="animate-image-in hero-frame absolute inset-0 m-0 md:inset-y-8 md:right-0 md:left-4 md:w-[min(100%,33rem)]">
+            <Image
+              src="https://avatars.githubusercontent.com/u/159481499?v=4"
+              alt="Portrait of Rukvith Reddy Challa"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 42vw"
+              className="object-cover object-[center_18%]"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#d5e5ee]/85 md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#dce8ef]/45"
+              aria-hidden="true"
+            />
+            <figcaption className="sr-only">
+              Full-bleed portrait used as the hero visual.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div className="order-2 flex flex-col justify-start px-6 pt-6 pb-12 md:order-1 md:justify-center md:px-10 md:pt-24 md:pb-20">
+          <span
+            className="animate-rise accent-bar mb-5 block md:mb-7"
+            aria-hidden="true"
+          />
 
           <h1
             id="hero-name"
-            className="animate-rise-delay-1 font-[family-name:var(--font-syne)] text-[clamp(2.85rem,8.8vw,5.9rem)] leading-[0.9] font-extrabold tracking-[-0.045em] text-ink"
+            className="animate-rise-delay-1 font-[family-name:var(--font-syne)] text-[clamp(2.5rem,11vw,5.9rem)] leading-[0.9] font-extrabold tracking-[-0.045em] text-ink"
           >
             Rukvith
             <br />
             Reddy Challa
           </h1>
 
-          <p className="animate-rise-delay-2 mt-7 max-w-[22rem] font-[family-name:var(--font-syne)] text-[1.35rem] leading-snug font-semibold tracking-[-0.02em] text-ink md:max-w-md md:text-[1.65rem]">
+          <p className="animate-rise-delay-2 mt-5 max-w-[22rem] font-[family-name:var(--font-syne)] text-[1.25rem] leading-snug font-semibold tracking-[-0.02em] text-ink md:mt-7 md:max-w-md md:text-[1.65rem]">
             I build things I wish existed.
           </p>
 
-          <p className="animate-rise-delay-2 mt-3 text-base text-steel md:text-lg">
+          <p className="animate-rise-delay-2 mt-2 text-base text-steel md:mt-3 md:text-lg">
             Based in Maryland, USA.
           </p>
 
-          <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <div className="animate-rise-delay-3 mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 md:mt-10">
             <a href="#work" className="cta-solid">
               View selected work
             </a>
@@ -46,26 +69,6 @@ export function Hero() {
               <span aria-hidden="true">→</span>
             </a>
           </div>
-        </div>
-
-        <div className="relative min-h-[46vh] w-full md:min-h-full">
-          <figure className="animate-image-in hero-frame absolute inset-0 m-0 md:inset-y-8 md:right-0 md:left-4 md:w-[min(100%,33rem)]">
-            <Image
-              src="https://avatars.githubusercontent.com/u/159481499?v=4"
-              alt="Portrait of Rukvith Reddy Challa"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 42vw"
-              className="object-cover object-[center_18%]"
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-[#d5e5ee]/90 via-[#d5e5ee]/10 to-transparent md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#dce8ef]/45"
-              aria-hidden="true"
-            />
-            <figcaption className="sr-only">
-              Full-bleed portrait used as the hero visual.
-            </figcaption>
-          </figure>
         </div>
       </div>
     </section>
