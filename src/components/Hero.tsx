@@ -14,19 +14,19 @@ export function Hero() {
         <div className="relative order-1 h-[42svh] w-full md:order-2 md:h-full md:min-h-[100svh]">
           <figure className="animate-image-in hero-frame absolute inset-0 m-0 h-full w-full md:inset-y-8 md:right-0 md:left-4 md:h-auto md:w-[min(100%,33rem)]">
             <Image
-              src="https://avatars.githubusercontent.com/u/159481499?v=4"
-              alt="Portrait of Rukvith Reddy Challa"
+              src="/hero-spiderman-spiderverse.jpg"
+              alt="Illustrated portrait of Rukvith Reddy Challa as Spider-Man in Into the Spider-Verse comic style, with bold outlines, halftone dots, and chromatic color offsets"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 42vw"
-              className="object-cover object-[center_18%]"
+              className="object-cover object-[center_22%]"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#d5e5ee]/85 md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#dce8ef]/45"
+              className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#d5e5ee]/55 md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#dce8ef]/28"
               aria-hidden="true"
             />
             <figcaption className="sr-only">
-              Full-bleed portrait used as the hero visual.
+              Full-bleed Spider-Verse style hero portrait of Rukvith as Spider-Man.
             </figcaption>
           </figure>
         </div>
