@@ -5,19 +5,25 @@ export function Hero() {
     <section
       id="top"
       className="relative isolate min-h-[100svh] overflow-hidden"
-      aria-label="Introduction"
+      aria-labelledby="hero-name"
     >
       <div className="atmosphere" aria-hidden="true" />
+      <div className="mesh-lines" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto grid min-h-[100svh] w-full max-w-6xl grid-cols-1 items-end gap-0 px-0 md:grid-cols-[1.05fr_0.95fr] md:items-stretch">
-        <div className="flex flex-col justify-end px-6 pb-14 pt-28 md:justify-center md:px-10 md:pb-20 md:pt-24">
-          <h1 className="animate-rise font-[family-name:var(--font-syne)] text-[clamp(2.75rem,9vw,5.75rem)] leading-[0.92] font-extrabold tracking-[-0.04em] text-ink">
+      <div className="relative z-10 mx-auto grid min-h-[100svh] w-full max-w-6xl grid-cols-1 md:grid-cols-[1.08fr_0.92fr]">
+        <div className="flex flex-col justify-end px-6 pb-12 pt-28 md:justify-center md:px-10 md:pb-20 md:pt-24">
+          <span className="animate-rise accent-bar mb-7 block" aria-hidden="true" />
+
+          <h1
+            id="hero-name"
+            className="animate-rise-delay-1 font-[family-name:var(--font-syne)] text-[clamp(2.85rem,8.8vw,5.9rem)] leading-[0.9] font-extrabold tracking-[-0.045em] text-ink"
+          >
             Rukvith
             <br />
             Reddy Challa
           </h1>
 
-          <p className="animate-rise-delay-1 mt-6 max-w-md font-[family-name:var(--font-syne)] text-xl leading-snug font-semibold tracking-[-0.02em] text-ink md:text-2xl">
+          <p className="animate-rise-delay-2 mt-7 max-w-[22rem] font-[family-name:var(--font-syne)] text-[1.35rem] leading-snug font-semibold tracking-[-0.02em] text-ink md:max-w-md md:text-[1.65rem]">
             I build things I wish existed.
           </p>
 
@@ -25,7 +31,7 @@ export function Hero() {
             Based in Maryland, USA.
           </p>
 
-          <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center gap-x-7 gap-y-4">
+          <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
             <a href="#work" className="cta-solid">
               View selected work
             </a>
@@ -36,26 +42,30 @@ export function Hero() {
               rel="noopener noreferrer"
             >
               GitHub
+              <span className="sr-only"> (opens in a new tab)</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
 
-        <div className="relative min-h-[48vh] w-full md:min-h-full">
-          <div className="animate-image-in absolute inset-0 md:inset-y-0 md:right-0 md:left-auto md:w-[min(100%,34rem)]">
+        <div className="relative min-h-[46vh] w-full md:min-h-full">
+          <figure className="animate-image-in hero-frame absolute inset-0 m-0 md:inset-y-8 md:right-0 md:left-4 md:w-[min(100%,33rem)]">
             <Image
               src="https://avatars.githubusercontent.com/u/159481499?v=4"
               alt="Portrait of Rukvith Reddy Challa"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 42vw"
-              className="object-cover object-[center_20%]"
+              className="object-cover object-[center_18%]"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-[#d7e4ec]/85 via-transparent to-transparent md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#dce8ef]/55"
+              className="absolute inset-0 bg-gradient-to-t from-[#d5e5ee]/90 via-[#d5e5ee]/10 to-transparent md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#dce8ef]/45"
               aria-hidden="true"
             />
-          </div>
+            <figcaption className="sr-only">
+              Full-bleed portrait used as the hero visual.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

@@ -7,13 +7,18 @@ import { Work } from "@/components/Work";
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <a href="#main" className="skip-link">
+        Skip to main content
+      </a>
       <SiteHeader />
-      <Hero />
-      <Work />
-      <About />
-      <Contact />
+      <main id="main">
+        <Hero />
+        <Work />
+        <About />
+        <Contact />
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }

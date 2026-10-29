@@ -23,20 +23,29 @@ export function Reveal({ children, className = "", delayMs = 0 }: RevealProps) {
       return;
     }
 
+    // Fail-safe: if IntersectionObserver never fires, content still appears.
+    const fallback = window.setTimeout(() => {
+      node.classList.add("is-visible");
+    }, 1800);
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
+            window.clearTimeout(fallback);
             node.classList.add("is-visible");
             observer.unobserve(node);
           }
         }
       },
-      { threshold: 0.18, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+    return () => {
+      window.clearTimeout(fallback);
+      observer.disconnect();
+    };
   }, []);
 
   return (
