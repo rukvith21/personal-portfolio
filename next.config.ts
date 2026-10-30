@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
+const repoName = "personal-portfolio";
+const isGithubPages = process.env.GITHUB_PAGES === "true";
+
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -10,6 +15,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  ...(isGithubPages
+    ? {
+        basePath: `/${repoName}`,
+        assetPrefix: `/${repoName}/`,
+      }
+    : {}),
 };
 
 export default nextConfig;

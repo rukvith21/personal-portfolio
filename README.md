@@ -2,7 +2,9 @@
 
 Personal portfolio site for [Rukvith Reddy Challa](https://github.com/rukvith21).
 
-**Stack:** Next.js (App Router) · TypeScript · Tailwind CSS
+**Live site (free GitHub Pages):** https://rukvith21.github.io/personal-portfolio/
+
+**Stack:** Next.js (App Router) · TypeScript · Tailwind CSS · static export
 
 ## Quick start
 
@@ -15,34 +17,26 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
-| Command         | Description                |
-| --------------- | -------------------------- |
-| `npm run dev`   | Local development server   |
-| `npm run build` | Production build           |
-| `npm run start` | Serve the production build |
-| `npm run lint`  | Run ESLint                 |
+| Command         | Description                              |
+| --------------- | ---------------------------------------- |
+| `npm run dev`   | Local development server                 |
+| `npm run build` | Production static export (`out/`)        |
+| `npm run start` | Not used for Pages (static `out/` only)  |
+| `npm run lint`  | Run ESLint                               |
 
-## Deploy
+## Deploy (free)
 
-### Vercel (recommended)
+### GitHub Pages (active)
+
+Pushes to `main` run `.github/workflows/deploy-pages.yml`, which builds with `GITHUB_PAGES=true` (sets `basePath` / `assetPrefix` to `/personal-portfolio`) and deploys the `out/` folder.
+
+Public URL: https://rukvith21.github.io/personal-portfolio/
+
+### Vercel (optional free Hobby)
 
 1. Import this repository in [Vercel](https://vercel.com/new).
-2. Framework preset: **Next.js** (defaults are fine).
-3. Deploy. Each push to `main` updates production.
-
-Or from the CLI:
-
-```bash
-npx vercel
-```
-
-### GitHub Pages (static export)
-
-This app uses Next.js image optimization and App Router features that fit Vercel best. For GitHub Pages:
-
-1. Set `output: "export"` in `next.config.ts`.
-2. If the site is served from a project path, set `basePath` / `assetPrefix` to `/personal-portfolio`.
-3. Build with `npm run build` and publish the `out/` directory via GitHub Actions or the Pages UI.
+2. Framework preset: **Next.js**. Leave `GITHUB_PAGES` unset so there is no `basePath`.
+3. Deploy. Hobby tier is free for personal use.
 
 ## Content notes
 
