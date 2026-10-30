@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { publicAsset } from "@/lib/asset";
 
 export function Hero() {
   return (
@@ -14,7 +15,7 @@ export function Hero() {
         <div className="relative order-1 h-[42svh] w-full md:order-2 md:h-full md:min-h-[100svh]">
           <figure className="animate-image-in hero-frame absolute inset-0 m-0 h-full w-full md:inset-y-8 md:right-0 md:left-4 md:h-auto md:w-[min(100%,33rem)]">
             <Image
-              src="/hero-arcane-anime.jpg"
+              src={publicAsset("/hero-arcane-anime.jpg")}
               alt="Painterly Arcane-style anime portrait of Rukvith Reddy Challa with oil-paint texture, dramatic amber and blue lighting, and rich pink accents"
               fill
               priority
