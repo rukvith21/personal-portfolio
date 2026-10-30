@@ -2,9 +2,21 @@
 
 Personal portfolio site for [Rukvith Reddy Challa](https://github.com/rukvith21).
 
-**Live site (free, public HTTPS):** https://cdn.jsdelivr.net/gh/rukvith21/personal-portfolio@0a75a25/index.html
-
 **Stack:** Next.js (App Router) · TypeScript · Tailwind CSS · static export
+
+## Live (free)
+
+**Public HTTPS (Vercel free temporary deploy — claim to keep forever on Hobby $0):**  
+https://express-ridge-ptyb6ix.tmp.now
+
+**Claim (keeps the site permanently on Vercel Hobby free):**  
+https://vercel.com/claim-deployment?code=4c04de19-3a1a-4805-8494-40bc1fd826e9
+
+After claiming (free account), Vercel will give a stable `*.vercel.app` URL.
+
+**GitHub Pages (also free):** workflow is on `main`. Enable once under  
+Repo → Settings → Pages → Source: GitHub Actions  
+then: https://rukvith21.github.io/personal-portfolio/
 
 ## Quick start
 
@@ -17,39 +29,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
-| Command         | Description                             |
-| --------------- | --------------------------------------- |
-| `npm run dev`   | Local development server                |
-| `npm run build` | Production static export (`out/`)       |
-| `npm run start` | Not used for static hosting             |
-| `npm run lint`  | Run ESLint                              |
-
-## Deploy (free)
-
-### jsDelivr CDN (live now — $0)
-
-Static files are published on the `gh-pages` branch and served via jsDelivr (free CDN for GitHub). Commit-pinned URL avoids cache lag:
-
-https://cdn.jsdelivr.net/gh/rukvith21/personal-portfolio@0a75a25/index.html
-
-Rebuild/publish:
-
-```bash
-export ASSET_PREFIX='https://cdn.jsdelivr.net/gh/rukvith21/personal-portfolio@gh-pages'
-export NEXT_PUBLIC_ASSET_PREFIX="$ASSET_PREFIX"
-npm run build
-# then publish the out/ directory to the gh-pages branch
-```
-
-### GitHub Pages (workflow ready)
-
-`.github/workflows/deploy-pages.yml` builds with `GITHUB_PAGES=true` on pushes to `main`. Enabling Pages once in **Settings → Pages → Source: GitHub Actions** unlocks:
-
-https://rukvith21.github.io/personal-portfolio/
-
-### Vercel Hobby (optional free)
-
-Import the repo at [vercel.com/new](https://vercel.com/new). Leave `GITHUB_PAGES` unset.
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Local development server          |
+| `npm run build` | Production static export (`out/`) |
+| `npm run lint`  | Run ESLint                        |
 
 ## Content notes
 
