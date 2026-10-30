@@ -2,7 +2,7 @@
 
 Personal portfolio site for [Rukvith Reddy Challa](https://github.com/rukvith21).
 
-**Live site (free GitHub Pages):** https://rukvith21.github.io/personal-portfolio/
+**Live site (free, public HTTPS):** https://cdn.jsdelivr.net/gh/rukvith21/personal-portfolio@0a75a25/index.html
 
 **Stack:** Next.js (App Router) · TypeScript · Tailwind CSS · static export
 
@@ -17,26 +17,39 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
-| Command         | Description                              |
-| --------------- | ---------------------------------------- |
-| `npm run dev`   | Local development server                 |
-| `npm run build` | Production static export (`out/`)        |
-| `npm run start` | Not used for Pages (static `out/` only)  |
-| `npm run lint`  | Run ESLint                               |
+| Command         | Description                             |
+| --------------- | --------------------------------------- |
+| `npm run dev`   | Local development server                |
+| `npm run build` | Production static export (`out/`)       |
+| `npm run start` | Not used for static hosting             |
+| `npm run lint`  | Run ESLint                              |
 
 ## Deploy (free)
 
-### GitHub Pages (active)
+### jsDelivr CDN (live now — $0)
 
-Pushes to `main` run `.github/workflows/deploy-pages.yml`, which builds with `GITHUB_PAGES=true` (sets `basePath` / `assetPrefix` to `/personal-portfolio`) and deploys the `out/` folder.
+Static files are published on the `gh-pages` branch and served via jsDelivr (free CDN for GitHub). Commit-pinned URL avoids cache lag:
 
-Public URL: https://rukvith21.github.io/personal-portfolio/
+https://cdn.jsdelivr.net/gh/rukvith21/personal-portfolio@0a75a25/index.html
 
-### Vercel (optional free Hobby)
+Rebuild/publish:
 
-1. Import this repository in [Vercel](https://vercel.com/new).
-2. Framework preset: **Next.js**. Leave `GITHUB_PAGES` unset so there is no `basePath`.
-3. Deploy. Hobby tier is free for personal use.
+```bash
+export ASSET_PREFIX='https://cdn.jsdelivr.net/gh/rukvith21/personal-portfolio@gh-pages'
+export NEXT_PUBLIC_ASSET_PREFIX="$ASSET_PREFIX"
+npm run build
+# then publish the out/ directory to the gh-pages branch
+```
+
+### GitHub Pages (workflow ready)
+
+`.github/workflows/deploy-pages.yml` builds with `GITHUB_PAGES=true` on pushes to `main`. Enabling Pages once in **Settings → Pages → Source: GitHub Actions** unlocks:
+
+https://rukvith21.github.io/personal-portfolio/
+
+### Vercel Hobby (optional free)
+
+Import the repo at [vercel.com/new](https://vercel.com/new). Leave `GITHUB_PAGES` unset.
 
 ## Content notes
 
