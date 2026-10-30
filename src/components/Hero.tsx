@@ -14,19 +14,19 @@ export function Hero() {
         <div className="relative order-1 h-[42svh] w-full md:order-2 md:h-full md:min-h-[100svh]">
           <figure className="animate-image-in hero-frame absolute inset-0 m-0 h-full w-full md:inset-y-8 md:right-0 md:left-4 md:h-auto md:w-[min(100%,33rem)]">
             <Image
-              src="/hero-spiderman-spiderverse.jpg"
-              alt="Illustrated portrait of Rukvith Reddy Challa as Spider-Man in Into the Spider-Verse comic style, with bold outlines, halftone dots, and chromatic color offsets"
+              src="/hero-arcane-anime.jpg"
+              alt="Painterly Arcane-style anime portrait of Rukvith Reddy Challa with oil-paint texture, dramatic amber and blue lighting, and rich pink accents"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 42vw"
-              className="object-cover object-[center_22%]"
+              className="object-cover object-[center_20%]"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#d5e5ee]/55 md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#dce8ef]/28"
+              className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#d5e5ee]/50 md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#dce8ef]/25"
               aria-hidden="true"
             />
             <figcaption className="sr-only">
-              Full-bleed Spider-Verse style hero portrait of Rukvith as Spider-Man.
+              Full-bleed Arcane-style painterly anime hero portrait of Rukvith.
             </figcaption>
           </figure>
         </div>
