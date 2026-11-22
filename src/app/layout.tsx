@@ -18,7 +18,12 @@ export const metadata: Metadata = {
   title: "Rukvith Reddy Challa — Portfolio",
   description:
     "I build things I wish existed. Personal portfolio of Rukvith Reddy Challa — MD, USA.",
-  metadataBase: new URL("https://rukvith21.github.io/personal-portfolio"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : "https://rukvith21.github.io/personal-portfolio"),
+  ),
   openGraph: {
     title: "Rukvith Reddy Challa",
     description: "I build things I wish existed.",
